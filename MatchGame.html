@@ -2,12 +2,39 @@
 <html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
-        <script src="UIFormatter.js"></script>
+        <script type="module" src="UIFormatter.js"></script>
     </head>
     <body id="mainPage">
+        <div id="gameMenu" width="100%" height="20%" style="background: black">
+            <form style="text-align: center; color: white">
+                <p>Difficulty Level: </p>
+                <input type="radio" id="easy" name="difficulty" value="easy"/>
+                <label for="easy">Easy</label>
+                <input type="radio" id="medium" name="difficulty" value="medium"/>
+                <label for="medium">Medium</label>
+                <input type="radio" id="hard" name="difficulty" value="hard"/>
+                <label for="hard">Hard</label>
+            </form>
+            <div style="text-align: center; margin-top: 20px">
+                <input type="button" id="startGameButton" value="Start Game" onclick="LoadGame()"/>
+            </div>
+        </div>
+        <div id="gameCanvas" width="100%" height="80%" style="background: black">
+        </div>
         <script>
-            var ui = new UIFormatter();
-            ui.LoadGameMenuPage();
+            const ui = require("./UIFormatter.js")
+            function LoadGame() {
+                var difficulty = "easy";
+                if (document.getElementById("easy").checked) {
+                    difficulty = "easy";
+                } else if (document.getElementById("medium").checked) {
+                    difficulty = "medium";
+                } else if (document.getElementById("hard").checked) {
+                    difficulty = "hard";
+                }
+                console.log(difficulty);
+                ui.LoadGameActivityPage(difficulty);
+            }
         </script>
     </body>
 </html>

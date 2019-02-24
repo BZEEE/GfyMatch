@@ -1,6 +1,6 @@
-// import GamePresenter from "./GamePresenter";
+import GamePresenter from "./GamePresenter"
 
-class UIFormatter {
+export class UIFormatter {
     constructor() {
         this.mainPage = document.getElementById("mainPage");
         this.gameMenuPage = null;
@@ -9,20 +9,7 @@ class UIFormatter {
     }
 
     LoadGameMenuPage() {
-        this.gameMenuPage = document.createElement("div");
-        this.gameMenuPage.style.width = "100%";
-        this.gameMenuPage.style.height = "100%";
-        this.gameMenuPage.style.background = "green";
-        // this.gameMenuPage.innerText = "bruh";
-        this.mainPage.appendChild(this.gameMenuPage);
-        // if (this.gameActivityPage != null) {
-        //     this.gameMenuPage.style.width = "100%";
-        //     this.gameMenuPage.style.height = "100%";
-        //     this.gameMenuPage.style.background = "black";
-        //     this.mainPage.appendChild(this.gameMenuPage);
-        // } else {
-        //     throw Error("GameMenuPage is null");
-        // }
+
     }
 
     LoadGameActivityPage(difficultyLevel) {
