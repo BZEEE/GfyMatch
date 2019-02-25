@@ -8,7 +8,7 @@
         <div id="gameMenu" width="100%" height="20%" style="background: black">
             <form style="text-align: center; color: white">
                 <p>Difficulty Level: </p>
-                <input type="radio" id="easy" name="difficulty" value="easy"/>
+                <input type="radio" id="easy" name="difficulty" value="easy" checked/>
                 <label for="easy">Easy</label>
                 <input type="radio" id="medium" name="difficulty" value="medium"/>
                 <label for="medium">Medium</label>
@@ -32,7 +32,6 @@
                 } else if (document.getElementById("hard").checked) {
                     difficulty = "hard";
                 }
-                console.log(difficulty);
                 ui.LoadGameActivityPage(difficulty);
             }
         </script>

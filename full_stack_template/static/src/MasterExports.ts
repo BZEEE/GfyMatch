@@ -3,7 +3,6 @@ export * from "./GameContentInterface";
 export * from "./GameModel";
 export * from "./GamePresenter";
 export * from "./Card";
-export * from "./Vec2";
 export * from "./UIFormatter";
 export * from "./APICaller";
 export * from "./ImageFormatter";
